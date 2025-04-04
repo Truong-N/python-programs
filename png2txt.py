@@ -2,11 +2,11 @@ from PIL import Image
 
 import pytesseract
 
-t = 'test'
-output= f'{t}.txt' #where you want to save and file name
-f=open(output, "a")
+fname = 'test'
+output_txt = f'{fname}.txt' #where you want to save and file name
+fw = open(output_txt, "a")
 
-idx= f"{t}.png"         
-text=str(pytesseract.image_to_string(Image.open(idx)))
-f.write(text)
-f.close()
+input_png = f"{fname}.png"         
+text = str(pytesseract.image_to_string(Image.open(input_png)))
+fw.write(text)
+fw.close()
