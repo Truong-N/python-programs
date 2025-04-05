@@ -7,7 +7,7 @@ try:
     print(len(lines))
     i = 0
     wrd_no = 1
-    while i <= len(lines):
+    while i <= 100: # len(lines): read 100 lines each days
         wrd = lines[i].strip()
         sent = lines[i+2]
         
